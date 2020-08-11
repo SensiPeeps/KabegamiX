@@ -18,7 +18,7 @@
         <item name="colorOnBackground">?colorOnSurface</item>
         <item name="colorError">#CC0047</item>
         <item name="colorOnError">#F9F9F9</item>
-        <item name="colorOnSurface">#444444</item>
+        <item name="colorOnSurface">#868686</item>
         <item name="colorBackgroundFloating">#111111</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">?colorSurface</item>
