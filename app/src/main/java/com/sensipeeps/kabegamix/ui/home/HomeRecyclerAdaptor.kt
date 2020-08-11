@@ -1,4 +1,4 @@
-package com.sensipeeps.kabegamix.ui.dashboard
+package com.sensipeeps.kabegamix.ui.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.sensipeeps.kabegamix.R
 
-class DashboardRecyclerAdaptor(val context: Context) :
-    RecyclerView.Adapter<DashboardRecyclerAdaptor.DashboardViewHolder>() {
+class HomeRecyclerAdaptor(val context: Context) :
+    RecyclerView.Adapter<HomeRecyclerAdaptor.DashboardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
         val view = LayoutInflater.from(parent.context)
