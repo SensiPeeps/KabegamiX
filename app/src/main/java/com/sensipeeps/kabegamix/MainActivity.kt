@@ -23,26 +23,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.nav_host_fragment)
-
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_favorite, R.id.navigation_more
-            )
-        )
         setSupportActionBar(home_toolbar)
         supportActionBar?.title = getString(R.string.title_home)
-        navView.setupWithNavController(navController)
-        home_toolbar.setupWithNavController(navController, appBarConfiguration)
 
         val navigation = findViewById<BottomNavigationView>(R.id.nav_view)
-        fm.beginTransaction().add(R.id.nav_host_fragment, fragment3, "3").hide(fragment3).commit()
-        fm.beginTransaction().add(R.id.nav_host_fragment, fragment2, "2").hide(fragment2).commit()
-        fm.beginTransaction().add(R.id.nav_host_fragment, fragment1, "1").commit()
+        fm.beginTransaction().add(R.id.container, fragment3, "3").hide(fragment3).commit()
+        fm.beginTransaction().add(R.id.container, fragment2, "2").hide(fragment2).commit()
+        fm.beginTransaction().add(R.id.container, fragment1, "1").commit()
         navigation.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
