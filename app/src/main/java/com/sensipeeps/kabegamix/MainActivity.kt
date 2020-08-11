@@ -31,7 +31,9 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
-        //setupActionBarWithNavController(navController, appBarConfiguration)
+        setSupportActionBar(home_toolbar)
+        supportActionBar?.title = getString(R.string.title_home)
+        navView.setupWithNavController(navController)
         home_toolbar.setupWithNavController(navController, appBarConfiguration)
 
         val navigation = findViewById<BottomNavigationView>(R.id.nav_view)
@@ -43,21 +45,23 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home -> {
                     fm.beginTransaction().hide(active).show(fragment1).commit()
                     active = fragment1
+                    supportActionBar?.title = getString(R.string.title_home)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_dashboard -> {
                     fm.beginTransaction().hide(active).show(fragment2).commit()
                     active = fragment2
+                    supportActionBar?.title = getString(R.string.title_dashboard)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_notifications -> {
                     fm.beginTransaction().hide(active).show(fragment3).commit()
                     active = fragment3
+                    supportActionBar?.title = getString(R.string.title_notifications)
                     return@OnNavigationItemSelectedListener true
                 }
             }
             false
         })
-
     }
 }
