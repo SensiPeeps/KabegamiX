@@ -1,0 +1,6 @@
+./gradlew assembleDebug
+if [ -f app/build/outputs/apk/debug/app-debug.apk ]; then
+     echo "Success"
+else
+     echo "Build failed!"
+fi
