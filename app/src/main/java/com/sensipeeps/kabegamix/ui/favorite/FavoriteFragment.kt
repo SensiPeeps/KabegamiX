@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.sensipeeps.kabegamix.R
-import com.sensipeeps.kabegamix.utils.jsonStructure
+import com.sensipeeps.kabegamix.utils.JsonStructure
 
 class FavoriteFragment : Fragment() {
 
-    lateinit var jsonStructure: jsonStructure
+    private lateinit var structure: JsonStructure
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -19,10 +19,11 @@ class FavoriteFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         val view =  inflater.inflate(R.layout.fragment_favorite, container, false)
-        jsonStructure = jsonStructure(context)
-        Log.d("FAV_FRAG", "author " + jsonStructure.retrieve(0, "wall_sam.json")[0] +
-                                    " url " + jsonStructure.retrieve(0, "wall_sam.json")[1] +
-                                    " name " + jsonStructure.retrieve(0, "wall_sam.json")[2] )
+        structure = JsonStructure(context)
+        Log.d("FAV_FRAG", "author " + (structure.retrieve(0, "wall_sam.json")?.get(0)) +
+                                    " url " + (structure.retrieve(0, "wall_sam.json")?.get(1)) +
+                                    " name " + (structure.retrieve(0, "wall_sam.json")?.get(2))
+        )
         return view;
     }
 }
