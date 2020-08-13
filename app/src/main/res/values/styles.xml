@@ -4,25 +4,38 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="DarkTheme.Blue" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="colorPrimary">#1490D7</item>
-        <item name="colorPrimaryVariant">#2C7EB9</item>
-        <item name="colorSecondary">#3E78AF</item>
-        <item name="colorSecondaryVariant">#803E78AF</item>
-        <item name="colorSurface">#000000</item>
-        <item name="colorOnPrimary">#F9F9F9</item>
-        <item name="colorOnSecondary">#F9F9F9</item>
-        <item name="colorOnBackground">?colorOnSurface</item>
-        <item name="colorError">#CC0047</item>
-        <item name="colorOnError">#F9F9F9</item>
-        <item name="colorOnSurface">#868686</item>
-        <item name="colorBackgroundFloating">#111111</item>
-        <item name="android:windowBackground">?colorSurface</item>
-        <item name="android:statusBarColor">?colorSurface</item>
-        <item name="android:navigationBarColor">#000000</item>
+    <style name="Theme.Base.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Dark Theme colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/textColorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentDark</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorAccentDark</item>
+        <item name="colorOnSecondary">@color/textColorPrimaryDark</item>
+        <item name="colorSurface">@color/dialogDark</item>
+        <item name="colorOnSurface">@color/textColorPrimaryDark</item>
+        <item name="colorOnBackground">@color/textColorPrimaryDark</item>
+        <item name="rippleColor">@color/rippleColorDark</item>
+
+        <!-- Themes -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="itemIconTint">@color/mtrl_bottom_nav_colored_item_tint</item>
+        <item name="itemRippleColor">@color/mtrl_bottom_nav_colored_ripple_color</item>
+        <item name="itemTextColor">@color/mtrl_bottom_nav_colored_item_tint</item>
+        <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+        <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
     </style>
 
 </resources>

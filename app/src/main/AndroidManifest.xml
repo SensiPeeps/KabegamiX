@@ -14,7 +14,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/DarkTheme.Blue">
+            android:theme="@style/Theme.Base.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
