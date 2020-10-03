@@ -1,7 +1,7 @@
 # KabegamiX
 [![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
-> :exclamation: Not maintained as for now. This project is has not started.
+> :exclamation: Not maintained as for now. This project has not started.
 
 An Android Wallpaper App built with awesome UI. 
 
